@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="topBox">
+    <van-grid column-num="3" border="{{ false }}">
+      <van-grid-item use-slot wx:for="{{TopMenus}}" wx:key="text">
+        <image src="{{item.img}}" />
+        <view>{{item.text}}</view>
+      </van-grid-item>
+    </van-grid>
+    <image src="../../assets/images/宣传图.png" mode="aspectFit" class="advertisingMap" />
+  </view>
+
+  <view class="mainBox">
+    <view class="title">
+      <van-icon name="volume-o" />
+      社区<text style="color: #e29943;">公告</text>
+    </view>
+    <view class="list">
+      <view class="li" wx:for="{{list}}" data-id="{{item.id}}" wx:key="id" bindtap="toDetail">
+        <view style="font-weight: bold;">{{item.title}}</view>
+        <view style="font-size: 28rpx;color: #686868;">{{item.content}}</view>
+        <view style="font-size: 24rpx;color: #BDBDBD;">{{item.createdAt}}</view>
+      </view>
+    </view>
+  </view>
+</view>

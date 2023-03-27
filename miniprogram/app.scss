@@ -1,0 +1,18 @@
+/**app.wxss**/
+view {
+  box-sizing: border-box;
+}
+
+image {
+  display: block;
+  width: 100%;
+}
+
+.container {
+  height: 100%;
+}
+
+.flexbox {
+  display: flex;
+  align-items: center;
+}

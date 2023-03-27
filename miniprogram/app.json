@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/my/my",
+    "pages/my/my-detail/my-detail",
+    "pages/detail/detail",
+    "pages/logs/logs",
+    "pages/public-page/public-page"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#d2dde8",
+    "navigationBarTitleText": "享+本地生活",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-grid": "@vant/weapp/grid/index",
+    "van-grid-item": "@vant/weapp/grid-item/index",
+    "van-image": "@vant/weapp/image/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-skeleton": "@vant/weapp/skeleton/index",
+    "van-action-sheet": "@vant/weapp/action-sheet/index"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#000000",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/index/index",
+        "iconPath": "assets/images/首页.png",
+        "selectedIconPath": "assets/images/首页-S.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/my/my",
+        "iconPath": "assets/images/我的.png",
+        "selectedIconPath": "assets/images/我的-S.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

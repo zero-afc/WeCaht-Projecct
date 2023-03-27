@@ -1,0 +1,31 @@
+/* pages/detail/detail.wxss */
+.container {
+  background-color: #ffffff;
+
+  .title {
+    padding: 30rpx 30rpx 15rpx;
+    color: #333333;
+    font-weight: bold;
+    font-size: 32rpx;
+    line-height: 1.5;
+    letter-spacing: 0rpx;
+  }
+
+  .desc {
+
+    display: flex;
+    justify-content: space-between;
+    color: #BDBDBD;
+    font-size: 24rpx;
+    line-height: 1.5;
+    padding: 0rpx 30rpx 15rpx;
+    border-bottom: 1px solid #F2F2F6;
+  }
+
+  .main {
+    color: #686868;
+    font-size: 28rpx;
+    line-height: 1.5;
+    padding: 30rpx;
+  }
+}

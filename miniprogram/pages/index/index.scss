@@ -1,0 +1,69 @@
+/**index.wxss**/
+.container {
+  background-color: #d2dde8;
+
+  .topBox {
+    padding: 40rpx;
+
+    .van-grid {
+      border-radius: 16rpx;
+      background: #FFFFFF;
+      font-size: 24rpx;
+      line-height: 30rpx;
+      letter-spacing: 0px;
+      text-align: center;
+      color: #686868;
+
+      image {
+        width: 60rpx;
+        height: 60rpx;
+        margin-bottom: 14rpx;
+      }
+    }
+
+    .advertisingMap {
+      position: relative;
+      z-index: 1;
+      height: 260rpx;
+    }
+  }
+
+  .mainBox {
+    width: 100%;
+    // height: 100vh;
+    position: absolute;
+    top: 390rpx;
+    background-color: #fbfbff;
+    border-radius: 30rpx 30rpx 0 0;
+    padding: 40rpx 40rpx;
+    padding-top: 65rpx;
+
+    .title {
+      font-weight: bold;
+      font-weight: semibold;
+      font-size: 36rpx;
+      line-height: 1.5;
+      letter-spacing: -2rpx;
+      padding: 40rpx 0;
+    }
+
+    .list {
+      .li {
+        // border: 1px solid #000;
+        padding: 30rpx;
+        border-radius: 8px;
+        background: #FFFFFF;
+        border-right: 1px solid rgb(209, 209, 209);
+        border-bottom: 1px solid rgb(209, 209, 209);
+
+        &:not(:last-child) {
+          margin-bottom: 40rpx;
+        }
+
+        view:not(:last-child) {
+          margin-bottom: 20rpx;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+<!--pages/public-page/public-page.wxml-->
+<view class="container">
+  <view class="panel">
+    <view class="nullBox" wx:if="{{list.length <= 0}}">
+      <image src="../../assets/images/空状态.png" mode="aspectFill" />
+      <view class="flexbox">
+        您还没有{{ state.text }}，请点击
+        <navigator url="{{state.url}}" style="padding-left: 10rpx; color: #77a2c8;">添加</navigator>
+      </view>
+    </view>
+    <!-- <view class="box"></view> -->
+  </view>
+</view>

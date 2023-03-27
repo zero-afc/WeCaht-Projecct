@@ -1,0 +1,13 @@
+<!--pages/detail/detail.wxml-->
+<view class="container">
+  <view>
+    <view class="title">{{information.title}}</view>
+    <view class="desc">
+      <text>{{information.creatorName}}</text>
+      <text>{{information.createdAt}}</text>
+    </view>
+  </view>
+  <view class="main">
+    <rich-text nodes="{{information.content}}"></rich-text>
+  </view>
+</view>

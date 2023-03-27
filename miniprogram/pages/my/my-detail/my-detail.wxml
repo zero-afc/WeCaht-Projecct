@@ -1,0 +1,30 @@
+<!--pages/my/my-detail/my-detail.wxml-->
+<view class="container">
+  <van-cell title="头像" is-link bind:click="handleShow">
+    <view slot="" class="box">
+      <image src="{{avatar}}" mode="aspectFit" class="userImg" />
+    </view>
+  </van-cell>
+
+  <van-cell-group>
+    <van-field value="{{ nickName }}" label="昵称" placeholder="请输入昵称" input-align="right" bind:blur="onBlur" />
+  </van-cell-group>
+
+  <view class="footer" bindtap="onSubmit">
+    <van-icon name="passed" />
+    <text>确定</text>
+  </view>
+
+  <van-action-sheet show="{{ show }}" cancel-text="取消" bind:cancel="onClose" bind:click-overlay="onClose">
+    <view class="selectBox">
+      <view wx:for="{{actions}}" wx:key="name" data-index="{{index}}" bindtap="onSelect">
+        <view>{{item.name}}</view>
+        <view class="userinfo-avatar" wx:if="{{item.avatar}}">
+          <open-data type="userAvatarUrl"></open-data>
+        </view>
+      </view>
+    </view>
+  </van-action-sheet>
+
+  <van-toast id="van-toast" />
+</view>
