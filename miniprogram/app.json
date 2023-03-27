@@ -7,6 +7,14 @@
     "pages/logs/logs",
     "pages/public-page/public-page"
   ],
+  "subPackages": [
+    {
+      "root": "packageA",
+      "pages": [
+        "pages/house/house"
+      ]
+    }
+  ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#d2dde8",
@@ -47,5 +55,14 @@
       }
     ]
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "requiredPrivateInfos": [
+    "getLocation",
+    "chooseLocation"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  }
 }

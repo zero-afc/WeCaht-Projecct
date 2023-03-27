@@ -10,8 +10,8 @@
     "miniprogram": {
       "list": [
         {
-          "name": "我的",
-          "pathName": "pages/my/my",
+          "name": "测试",
+          "pathName": "packageA/pages/house/house",
           "query": "",
           "launchMode": "default",
           "scene": null

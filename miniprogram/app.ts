@@ -1,4 +1,4 @@
-import { getUserInfo } from "./api/modules/userInfo"
+import { getUserInfo, refreshToken } from "./api/modules/userInfo"
 import { loadImage } from "./utils/util"
 
 // app.ts
@@ -10,14 +10,25 @@ App<IAppOption>({
   initData() {
     // 等待数据加载完成后再执行后续操作
     return new Promise<void>(async (resolve, reject) => {
-      const token = wx.getStorageSync("token")
-      if (token) {
-        const { data } = await getUserInfo()
-        const avatar = await loadImage(data.avatar)
-        this.globalData.userInfo = { ...data, avatar }
+      try {
+        const token = wx.getStorageSync("token")
+        if (!token) return reject()
+        const result = await getUserInfo()
+        if (result.code === 401) {
+          // 处理token过期
+          const { data } = await refreshToken(wx.getStorageSync("refreshToken"))
+          wx.setStorageSync('token', data.token);
+          wx.setStorageSync('refreshToken', data.refreshToken);
+          this.initData()
+          return
+        }
+        const avatar = await loadImage(result.data.avatar)
+        this.globalData.userInfo = { ...result.data, avatar }
         this.globalData.token = token
         resolve()
-      } else reject()
+      } catch (error) {
+        console.log(error);
+      }
     })
   },
   async onLaunch() {

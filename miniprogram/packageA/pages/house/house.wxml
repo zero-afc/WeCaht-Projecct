@@ -1,0 +1,13 @@
+<!--pages/house/house.wxml-->
+<view class="container">
+  <van-cell-group title="当前地址" border="{{ false }}">
+    <van-cell title="{{address}}" border="{{ false }}" bindtap="chooseLocation">
+      <van-icon name="aim" style="color: #5591af;" />
+      <text style="color: #5591af;margin-left: 7rpx;">重新定位</text>
+    </van-cell>
+  </van-cell-group>
+
+  <van-cell-group title="附近小区" border="{{ false }}">
+    <van-cell is-link wx:for="{{list}}" title="{{item.title}}" wx:key="index"></van-cell>
+  </van-cell-group>
+</view>

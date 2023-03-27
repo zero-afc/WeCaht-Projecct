@@ -8,7 +8,7 @@ Page({
    */
   data: {
     linkList: flatObject([
-      { title: "我的房屋", url: "/pages/logs/logs", icon: "../../assets/images/我的房屋.png", text: "认证房屋" },
+      { title: "我的房屋", url: "/packageA/pages/house/house", icon: "../../assets/images/我的房屋.png", text: "认证房屋" },
       { title: "我的保修", url: "/pages/logs/logs", icon: "../../assets/images/我的保修.png", text: "保修记录" },
       { title: "访客记录", url: "/pages/logs/logs", icon: "../../assets/images/访客记录.png", text: "访客记录" },
     ], "title"),

@@ -18,6 +18,18 @@ export const sendLogin = (data: { mobile: string, code: string }) => {
 }
 
 /**
+ * @description 刷新token
+ * @param token 
+ */
+export const refreshToken = (token: string) => {
+  return http.post<ResultData<User.Token>>("/refreshToken", {}, {
+    header: {
+      Authorization: "Bearer " + token
+    }
+  })
+}
+
+/**
  * @description 获取用户信息
  * @param data 
  */

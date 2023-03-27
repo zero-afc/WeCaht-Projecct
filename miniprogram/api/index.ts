@@ -10,7 +10,7 @@ class RequestHttp {
   private requestInterceptor(options: Request.option) {
     const token = wx.getStorageSync("token")
     if (token) {
-      options = { ...options, header: { ...options.header, Authorization: `Bearer ${token}` } }
+      options = { ...options, header: { Authorization: `Bearer ${token}`, ...options.header } }
     }
     return options
   }

@@ -61,6 +61,7 @@ Page({
     const { data } = await sendLogin({ ...this.data.form })
     if (data.token) {
       wx.setStorageSync('token', data.token);
+      wx.setStorageSync('refreshToken', data.refreshToken);
       Toast.loading({ duration: 0, message: '正在拼命加载', forbidClick: true });
       await app.initData()
       Toast.clear()

@@ -1,0 +1,15 @@
+/* pages/house/house.wxss */
+.container {
+  background-color: #fafafa;
+  min-height: 100vh;
+
+  .van-cell-group {
+    .van-cell {
+      background-color: rgb(255, 255, 255);
+
+      .van-cell__title {
+        flex: 3;
+      }
+    }
+  }
+}
